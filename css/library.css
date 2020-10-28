@@ -1,0 +1,120 @@
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+
+body {
+    background-image: url("../img/libfloor.png");
+    background-size: 400px;
+        font-family: 'VT323', monospace;
+}
+
+.librarycontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.librarycontainer div {
+    margin: 25px;
+    height: 300px;
+    overflow: auto;
+    flex: 0 0 300px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width:150px;
+}
+
+.mybox {
+    animation: shake 2.5s infinite;
+    -webkit-animation: shake 2.5s infinite;
+}
+
+p {
+    text-align: justify;
+    z-index: 3;
+    position: relative;
+    top: -40%;
+    opacity: 0;
+    font-size:21px;
+}
+
+.boxtext {
+    color: white;
+    font-size: 30px;
+    margin-top:0;
+}
+
+.boxhover:hover{
+    background: red;
+}
+
+
+.librarycontainer div:hover p {
+    opacity: 1;
+}
+
+.librarycontainer div:hover img {
+    opacity: 0;
+}
+
+.librarycontainer div:hover #shy {
+    opacity: 1;
+    animation: vanish 2s infinite;
+    -webkit-animation: vanish 2s infinite;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(0px, 1px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    85% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    90% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    95% {
+        transform: translate(2px, 1px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes vanish {
+    from{
+        opacity: 1;
+    }
+
+    75% {
+          opacity: .4;
+    }
+
+    80% {
+          opacity: .3;
+    }
+    100%{
+        opacity: .8;
+    }
+}

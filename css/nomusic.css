@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+body{
+    background-color: black;
+            font-family: 'VT323', monospace;
+
+}
+.nomusic{
+    width:500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin:auto;
+    margin-top:300px;
+    animation: jerk 2s steps(1) infinite;
+}
+
+.nomusic p{
+    color: white;
+    opacity: 0;
+    font-size:20px;
+}
+
+.nomusic #p1{
+     animation: appear 2s 1s forwards; 
+}
+.nomusic #p2{
+     animation: appear 2s 3s forwards; 
+}
+.nomusic #p3{
+    font-style: italic;
+    animation: appear 2s 6s forwards; 
+}
+a{
+    color: white;
+}
+
+a:hover{
+    opacity: .8;
+}
+
+@keyframes appear{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes jerk{
+    0%{transform: translate(0px,0px);}
+    20%{transform: translate(-2px,1px);}
+    30%{transform: translate(-1px,-2px);}
+    100%{transform: translate(0,0)
+}

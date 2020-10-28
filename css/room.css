@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap');
+
+body {
+    background-color: palevioletred;
+    font-family: 'VT323', monospace;
+    overflow-y: hidden;
+}
+
+footer {
+    background-image: url("../img/libfloor.png");
+    background-size: 250px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: 0px;
+    height: 80px;
+    z-index: -1;
+}
+
+.wall {
+    background-color: #C95775;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 275px;
+    z-index: -2;
+}
+
+article {
+    display: flex;
+    margin-left: 0px;
+    height: 500px;
+    flex-wrap: nowrap;
+    bottom: 0;
+    position: absolute;
+}
+
+article div{
+    margin: 0px 70px 0px 100px;
+}
+
+.div2 {
+    position: relative;
+    transform: translate(-300px, -250px);
+}
+
+.div2 img:hover {
+    box-shadow: 0px 0px 40px lightyellow;
+}
+
+.div3 {
+    position: relative;
+    transform: translate(-100px, -90px);
+}
+
+#cal {
+    width: 110px;
+    height: 220px;
+    background-image: url("../img/calender.png");
+    background-position: 0px 0px;
+}
+
+#cal:hover {
+    width: 110px;
+    height: 220px;
+    background-image: url("../img/calender.png");
+    background-position: 220px 0px;
+    cursor: pointer;
+
+}
+
+#cal:active {
+    width: 110px;
+    height: 220px;
+    background-image: url("../img/calender.png");
+    background-position: 110px 0px;
+
+}
+
+.div4 {
+    position: relative;
+    transform: translate(-400px, -40px);
+}
+
+.div5 {
+    position: relative;
+    transform: translate(0px, -140px);
+
+}
+
+#fridge {
+    width: 337px;
+    height: 565px;
+    background-image: url("../img/fridge.png");
+    background-position: 0px 0px;
+}
+
+#fridge:hover{
+    cursor: zoom-in;
+}
+
+.page {
+    transform: translate(150px, -200px);
+    z-index: 3;
+    animation: shake 2.5s infinite;
+}
+
+.div6 {
+    position: relative;
+    width: 214px;
+    height: 241px;
+    background-image: url("../img/paintings.png");
+    background-position: 0px 0px;
+    transform: translate(0, -200px);
+
+}
+
+.text {
+    width: 250px;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: justify-all;
+    margin-left: 150px;
+    color: white;
+
+}
+
+.food {
+    font-size: 25px;
+    width: 250px;
+    height: 250px;
+    margin: 0px;
+    line-height: 30px;
+    color: white
+}
+
+.musicnote1 {
+    position: absolute;
+    transform: translate(400px, 150px);
+    animation: music1dance 1s infinite ease;
+}
+
+.musicnote2 {
+    position: absolute;
+    transform: translate(700px, 300px);
+    background-image: url("../img/musicnote2.png");
+    background-position: 0px 0px;
+    width: 100px;
+    height: 100px;
+    animation: music2dance 1s .5s infinite ease;
+    -webkit-animation: music2dance 1s .5s infinite ease;
+}
+
+.musicnote2:hover {
+    background-image: url("../img/musicnote2.png");
+    background-position: 0px 100px;
+}
+
+.musicnote3 {
+    position: absolute;
+    transform: translate(850px, 200px);
+    animation: music3dance 1s .2s infinite ease;
+
+}
+
+@keyframes music1dance {
+    0% {
+        transform: translate(400px, 150px);
+    }
+
+    10% {
+        transform: translate(400px, 150px);
+    }
+
+    60% {
+        transform: translate(400px, 180px);
+    }
+
+    100% {
+        transform: translate(400px, 150px);
+    }
+}
+
+@keyframes music2dance {
+    0% {
+        transform: translate(700px, 300px);
+    }
+
+    10% {
+        transform: translate(700px, 300px);
+    }
+
+    60% {
+        transform: translate(700px, 330px);
+    }
+
+    100% {
+        transform: translate(700px, 300px);
+    }
+}
+
+@keyframes music3dance {
+    0% {
+        transform: translate(850px, 200px);
+    }
+
+    10% {
+        transform: translate(850px, 200px);
+    }
+
+    60% {
+        transform: translate(850px, 230px);
+    }
+
+    100% {
+        transform: translate(850px, 200px);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(150px, -200px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(150px, -200px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(150px, -199px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(149px, -198px) rotate(-1deg);
+    }
+
+    85% {
+        transform: translate(147px, -199px) rotate(0deg);
+    }
+
+    90% {
+        transform: translate(147px, -199px) rotate(-1deg);
+    }
+
+    95% {
+        transform: translate(152px, -199px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(150px, -200px) rotate(0deg);
+    }
+}

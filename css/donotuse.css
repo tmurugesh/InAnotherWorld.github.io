@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+body{
+    background-color: #DDDDD6;
+            font-family: 'VT323', monospace;
+
+}
+.donotuse{
+    width:500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    margin-top:200px;
+}
+
+.donotuse p{
+    color: mediumpurple;
+    opacity: 0;    font-size:20px;
+
+}.donotuse h2{
+    color:mediumpurple;    font-size:20px;
+
+}
+
+.donotuse #p1{
+     animation: appear 2s 2s forwards; 
+}
+.donotuse #p2{
+     animation: appear 2s 4s forwards; 
+}
+.donotuse #p3{
+    animation: appear 2s 6s forwards; 
+}.donotuse #p4{
+    font-style: italic;
+    animation: appear 2s 8s forwards; 
+}
+a{
+    color: mediumpurple;
+}
+
+a:hover{
+    opacity: .8;
+}
+img {
+    width: 100%;
+    opacity: .2;
+}
+
+@keyframes appear{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap');
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background: linear-gradient(#ddddd6 65%, white);
+}
+
+/*Side scrolling parallax bg tutorial found here http://blog.palominolabs.com/2012/10/18/side-scrolling-parallax-background-effect-using-only-css3/index.html*/
+.bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../img/layer1.png") 0 0, url("../img/layer2.png") 40% 0, url("../img/layer3.png") 75% 0, url("../img/stars.gif") 80% 0, url("../img/layer4.png"), #ddddd6;
+    background-repeat: repeat-x;
+    transition: left 200s linear;
+}
+body:hover .bg {
+    left: -9999px;
+}
+
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 3.5s infinite ease-in-out;
+    -webkit-animation: floating 3.5 infinite ease-in-out;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+    top: 0;
+    position: sticky;
+}
+
+
+
+.indexflex {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+
+}
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #EDDB92;
+    animation: buttonGlow 1.8s infinite;
+    -webkit-animation: buttonGlow 1.8s infinite;
+    border-style: dotted;
+    border-color: #9791C7;
+
+}
+.circle p {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50%;
+    line-height: 0;
+}
+.circle:hover {
+    animation: buttonGlowHover 1.2s infinite;
+    -webkit-animation: buttonGlowHover 1.2s infinite;
+}
+#donotuse {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    text-align: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 70px;
+    color: #ddccdf;
+    text-decoration: none;
+    font-weight: 600;
+}
+#donotuse:hover {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    text-align: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 70px;
+    color: #ddccdf;
+    text-decoration: underline;
+    font-weight: 600;
+
+}
+a {
+    text-decoration: none;
+}
+
+/*Glowing button tutorial found at https://zurb.com/playground/radioactive-buttons*/
+@keyframes buttonGlow {
+    0% {
+        background-color: #EDDB92;
+    }
+
+    50% {
+        background-color: #F7F4B0;
+        -webkit-box-shadow: 0 0 15px #F7F4B0;
+    }
+
+    100% {
+        background-color: #EDDB92;
+    }
+}
+
+@keyframes buttonGlowHover {
+    0% {
+        background-color: #F3894C;
+    }
+
+    50% {
+        background-color: #F6AC62;
+        -webkit-box-shadow: 0 0 9px #F6AC62;
+    }
+
+    100% {
+        background-color: #F3894C;
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translate(-50%, -50%);
+    }
+
+    60% {
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}

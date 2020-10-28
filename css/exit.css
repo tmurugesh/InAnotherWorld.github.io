@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap');
+
+body {
+    background-color: black;
+    cursor: default;
+}
+
+p {
+    font-size: 100px;
+    text-align: justify;
+    margin: 0px;
+    font-style: italic;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 700;
+    text-shadow: 6px 6px orangered;
+    animation: expand 30s 1s 1 forwards;
+    -webkit-animation: expand 30s 1s 1 forwards;
+    width: 100%;
+    top: 0;
+}
+
+h1 {
+    font-size: 20px;
+    color: white;
+    font-family: 'VT323', monospace;
+    position: static;
+    text-align: end;
+
+
+}
+h1:hover {
+    background-color: orangered;
+    color:orangered;;
+
+
+}
+
+.white {
+    color: white;
+}
+
+.white:hover {
+    color: black;
+    text-shadow: -55px 200px white;
+}
+
+.red:hover{
+   color: black;
+    text-shadow: 100px 100px orangered;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes expand {
+    0% {
+        font-size: 100px
+    }
+
+    100% {
+        font-size: 250px
+    }
+}
